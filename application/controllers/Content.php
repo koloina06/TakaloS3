@@ -18,7 +18,6 @@ class Content extends CI_Controller {
             $data['product']= $this->objets_models->getMyProducts($_SESSION['idUser']);
             $this->load->helper('url');
             $this->load->view('pages/accueil',$data);
- 
 
      }
 

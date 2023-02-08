@@ -18,10 +18,24 @@ class Objet extends CI_Controller {
 		$a=$this->objets_models->insert_proprietaire($_SESSION['idUser'], $res);
 		redirect('Objet/produits');
 	}
+	public function changing($idObjet=''){
+		$this->load->model('objets_models');
+		$a['objet']=$this->objets_models->selectObjet($idObjet);
+		$this->load->view('pages/modifier_objet', $a);
+	}
 	public function produits(){
 		$this->load->model('objets_models');
 		$res=$this->objets_models->getMyProducts($_SESSION['idUser']);
 		$this->load->view('pages/accueil');	
+	}
+	public function modify_product(){
+		$idObjet=$this->input->get('idObjet');
+		$description=$this->input->get('descri');
+		$photo=$this->input->get('photo');	
+		$prix=$this->input->get('prix');
+		$this->load->model('objets_models');
+		$res=$this->objets_models->modifier_produit($description, $photo, $prix, $idObjet);
+		redirect('head/accueil');
 	}
 }
 ?>

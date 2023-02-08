@@ -27,13 +27,32 @@
             </a>
           </li>
           <li class="nav-item">
-          <a href="<?php echo site_url('Head/ajout_produit')?>" class="nav-item nav-link">Ajouter un nouveau produit</a>
+          <a href="<?php echo site_url('Objet')?>" class="nav-item nav-link">Ajouter un nouveau produit</a>
           </li>
           <li class="nav-item">
           <a href="<?php echo site_url('Head/list_propositions')?>" class="nav-item nav-link">Propositions</a>
           </li>
           <li class="nav-item">
-          <a href="<?php echo site_url('Head/quit')?>" class="nav-item nav-link">Deconnexion</a>
+            <form action="<?php echo site_url('Search/check_Search') ;?>" method="get">
+                <input type="text" class="form-control" placeholder="Search for products" name="mot" class="nav-item nav-link"> <i class="fa fa-search"></i>
+            </li>
+              <p>ok</p>
+              <li class="nav-item">
+                  <select class="form-control" id="exampleFormControlSelect1" name="idCateg" required="required">
+                        <?php for($i=0; $i<count($categ); $i++){ ?>
+                            <option value="<?php echo $categ[$i]['idCategorie'] ?>"><?php echo $categ[$i]['categorie'] ?></option></a>
+                        <?php } ?>
+                    </select> 
+              </li>
+              <p>ok</p>
+              <li class="nav-item">
+                      <button type="submit">Rechercher</button>
+              </li>
+              <p>ok</p>
+              <li class="nav-item">
+                <a href="<?php echo site_url('Head/quit')?>" class="nav-item nav-link">Deconnexion</a>
+              </li>
+            </form>
           </li>
         </ul>
       </div>

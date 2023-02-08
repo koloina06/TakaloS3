@@ -49,10 +49,15 @@
         <?php for($i=0; $i<count($product); $i++){ ?>
                 <div class="col-lg-4 col-md-6 mb-4">
                   <div class="card h-100">
-                        <p><?php echo $product[$i]['descriptions'];?></p>
-                        <p><?php echo $product[$i]['prix'];?>$</p>
+                  <p name="descri"><?php echo $product[$i]['descriptions'];?></p>
+                        <p name="photo"><?php echo $product[$i]['photo'];?></p>
+                        <p name="prix"><?php echo $product[$i]['prix'];?>$</p>
+                        <a href="<?php echo site_url('Objet/changing/'.$product[$i]['idObjet']) ;?>" class="nav-item nav-link">Modifier</a>
                         <a href="<?php echo site_url('Content/get_choix/'.$product[$i]['idObjet']) ;?>" class="nav-item nav-link">Choisir</a>
+                        <a href="<?php echo site_url('Echange/prix_estimatif/'.$product[$i]['idObjet'].'/'.'10') ;?>">10%</a>
+                        <a href="<?php echo site_url('Echange/prix_estimatif/'.$product[$i]['idObjet'].'/'.'20') ;?>">20%</a>
                 </div>
+
                 </div>
             <?php  } ?>
           </div>

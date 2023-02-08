@@ -82,15 +82,16 @@ INSERT INTO Utilisateur VALUES(NULL, 'koloina', 'M', 'koloina.mihajatiana@gmail.
 INSERT INTO Utilisateur VALUES(NULL, 'angoty', 'A', 'angoty@gmail.com', 'angoty');
 INSERT INTO Categorie VALUES(NULL, 'Vetements');
 INSERT INTO Categorie VALUES(NULL, 'Livres');
+INSERT INTO Categorie VALUES(NULL, 'Chaussures');
 
-insert into objet values(null,1,'nike','test',50.00);
-insert into objet values(null,1,'converse','test1',50.00);
-insert into objet values(null,1,'robes','test1',50.00);
-insert into objet values(null,1,'jupe','test1',50.00);
-insert into objet values(null,1,'magasine','test1',50.00);
-insert into objet values(null,2,'roman','test1',50.00);
-insert into objet values(null,2,'bd','test1',50.00);
-insert into objet values(null,1,'pantalon','test1',50.00);
+insert into objet values(null,3,'nike','PHOTO',10.00);
+insert into objet values(null,3,'converse','PHOTO',15.00);
+insert into objet values(null,1,'robes','PHOTO',100.00);
+insert into objet values(null,1,'jupe','PHOTO',20.00);
+insert into objet values(null,2,'magasine','PHOTO',60.00);
+insert into objet values(null,2,'roman','PHOTO',80.00);
+insert into objet values(null,2,'bd','PHOTO',47.00);
+insert into objet values(null,1,'pantalon','PHOTO',70.00);
 
 
 insert into Proprietaire values(1,1);
@@ -101,6 +102,7 @@ insert into Proprietaire values(2,5);
 insert into Proprietaire values(2,6);
 insert into Proprietaire values(2,7);
 insert into Proprietaire values(2,8);
+
 
 
 

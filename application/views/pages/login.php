@@ -47,6 +47,7 @@
                 </div>
             </form>
         <a href="<?php echo site_url('Inscription')?>">S'inscrire</a>
+        <a href="<?php echo site_url('Login/show_admin')?>">Se connecter en tant qu'admin</a>
 </body>
 </html>
 

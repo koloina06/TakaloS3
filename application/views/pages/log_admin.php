@@ -7,7 +7,7 @@
         <link href="<?php echo site_url('assets/css/styles.css')?>" rel="stylesheet">
 	</head>
 	<body>
-        <form action="<?php echo site_url('Login/check_login') ;?>" method="get">
+        <form action="<?php echo site_url('Login/check_logAdmin') ;?>" method="get">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-2"></div>
@@ -23,12 +23,12 @@
                             <div class="col-lg-12 login-form">
                                 <form>
                                     <div class="form-group">
-                                        <label class="form-control-label">USERNAME</label>
-                                        <input type="text" class="form-control" value="<?php echo $admin['email']; ?>" name="email">
+                                        <label class="form-control-label">Votre email</label>
+                                        <input type="text" class="form-control" name="email" value="<?php echo $admin['email']; ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label class="form-control-label">PASSWORD</label>
-                                        <input type="password" class="form-control" value="<?php echo $admin['mdp']; ?>" name="mdp">
+                                        <label class="form-control-label">Votre mot de passe</label>
+                                        <input type="password" class="form-control" name="mdp" value="<?php echo $admin['mdp']; ?>">
                                     </div>
 
                                     <div class="col-lg-12 loginbttm">
@@ -36,7 +36,7 @@
                                             <!-- Error Message -->
                                         </div>
                                         <div class="col-lg-6 login-btm login-button">
-                                            <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+                                            <button type="submit" class="btn btn-outline-primary">Se connecter</button>
                                         </div>
                                     </div>
                                 </form>
